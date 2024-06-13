@@ -1,0 +1,255 @@
+@import url(./colors.css);
+/* Ogólne */
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: var(--bgcolor);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	scroll-behavior: smooth;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+input[type='submit'].formbtn {
+	margin: auto;
+	border: 2px solid #000;
+	border-radius: 12px;
+	width: 100px;
+	height: 1em;
+}
+
+.underline {
+	margin-top: 0.5rem;
+	width: 45%;
+	height: 0.3rem;
+	border-radius: 12px;
+	background-color: var(--sub-color);
+}
+/* Nawigacja */
+.nav {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	backdrop-filter: blur(20px);
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 5;
+	height: 6rem;
+}
+.nav .list-items {
+	margin-top: 0.5em;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	list-style: none;
+}
+.nav .list-items li {
+	height: 50px;
+	cursor: pointer;
+}
+.nav .list-items :first-child {
+	margin-right: auto;
+}
+.list-item {
+	height: 100%;
+	font-size: 2.2rem;
+	padding: 0 1rem;
+	color: var(--white);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	transition: all ease 0.3s;
+}
+/* Chowane menu */
+.fa-clipboard-list {
+	padding-right: 0.7rem;
+	color: var(--main-color);
+	transition: all ease 0.3s;
+}
+.fa-clipboard-list:hover {
+	color: var(--accent-color);
+}
+.list-item:hover {
+	color: var(--main-color);
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 40vw;
+	backdrop-filter: blur(20px);
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.sidebar li {
+	padding: 0.8rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	list-style: none;
+}
+.sidebar a {
+	width: 100%;
+}
+.sidebar .close-btn {
+	color: var(--white);
+	font-size: 1.5rem;
+	text-decoration: none;
+	position: absolute;
+	left: 80%;
+	padding: 1rem 1rem 0 0;
+	transition: all ease 0.3s;
+}
+.close-btn:hover {
+	color: var(--sub-color);
+}
+.menu-btn {
+	display: none;
+}
+
+.list-items img {
+	margin-left: 30px;
+	margin-top: 10px;
+	height: 40px;
+	width: 130px;
+}
+/* strona główna */
+.hero-bg {
+	background-image: url(../img/bg/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+}
+.hero-bg::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+.hero-bg .hero-text p {
+	font-size: 1.5rem;
+	margin-bottom: 0.3rem;
+}
+.hero-bg .hero-text h1 {
+	font-weight: 400;
+	font-size: 4rem;
+	color: var(--white);
+	margin-bottom: 0.3rem;
+}
+.hero-bg {
+	position: relative;
+}
+.hero-bg .hero-text {
+	position: relative;
+	z-index: 1;
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	flex-direction: column;
+	margin: auto;
+}
+/* Stopka */
+.footer {
+    background-color: var(--bgcolor);
+    width: 100%;
+    padding: 20px 0; /* Dodanie odstępu na górze i dole */
+    box-sizing: border-box; /* Uwzględnienie paddingu w szerokości elementu */
+}
+
+.text {
+    color: white;
+    font-size: 16px;
+    text-align: center; 
+    margin-bottom: 20px; 
+	padding: 0 25%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Dodanie odstępów między ikonami */
+    margin-bottom: 20px; /* Dodanie marginesu na dole */
+    padding-left: 0; /* Zresetowanie paddingu, aby uniknąć dodatkowego odstępu */
+}
+
+.social-icons img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.7);
+}
+
+.footer-nav {
+    margin: 20px 0;
+    text-align: center; /* Wycentrowanie nawigacji */
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    gap: 20px; /* Dodanie odstępów między linkami */
+}
+
+.footer-nav li {
+    list-style: none;
+}
+
+.footer-nav li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.footer-nav li a:hover {
+    color: var(--main-color);
+}
+
+.footer-bottom {
+    border-top-left-radius: 1.1em;
+    border-top-right-radius: 1.1em;
+    background-color: var(--black);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1.5em;
+    color: var(--white);
+}
+
+
+/* media queries */
+@media (max-width: 900px) {
+	.hide-on-mobile {
+		display: none;
+	}
+	.menu-btn {
+		display: block;
+	}
+}
+@media (max-width: 400px) {
+	.sidebar {
+		width: 100%;
+	}
+}
